@@ -35,7 +35,11 @@
     <% form.label :insta, style: "display: block" %>
     <%= form.text_field :insta, class:"form-control", placeholder:"Insta" %>
   </div>
-
+  </br>
+  <div class="field form-group hidden">
+    <% form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id, class:"form-control", value:current_user.id, id: :friend_user_id, type: :hidden %>
+  </div>
   <div>
   </br>
     <%= form.submit class:"btn btn-secondary" %>
